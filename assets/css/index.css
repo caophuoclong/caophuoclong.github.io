@@ -105,7 +105,7 @@ textarea {
   resize: none; }
 
 html {
-  font-family: 'Rokkitt', serif;
+  font-family: "Rokkitt", serif;
   font-size: 1rem;
   scroll-behavior: smooth; }
 
@@ -146,7 +146,7 @@ body {
         font-size: 2rem;
         background: #17cfc3;
         background: radial-gradient(circle farthest-corner at center center, #17cfc3 0%, #4f82cf 100%);
-        background-clip: text;
+        -webkit-background-clip: text;
         -webkit-text-fill-color: transparent; }
     body .left-side #direct {
       width: 70%;
@@ -384,7 +384,7 @@ body {
     width: 90% !important;
     left: 5% !important;
     background-color: #69a9df !important;
-    content: '';
+    content: "";
     position: absolute; }
   .box .selected {
     position: relative;
@@ -399,7 +399,7 @@ body {
     font-size: 1.4rem; }
   .box .custom-underline::after,
   .box .selected::after {
-    content: '';
+    content: "";
     position: absolute; }
   .box .custom-underline,
   .box .custom-underline:hover,
@@ -670,7 +670,7 @@ a > img {
 .btn-theme-change {
   margin-left: 2rem; }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1024px) {
   .hire-me__card {
     width: 7rem; }
   .left-side__brand__field__name {
