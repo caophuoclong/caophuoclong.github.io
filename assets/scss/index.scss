@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Rokkitt:wght@500&display=swap');
-@import '../scss/reset.scss';
-@import '../scss/responsive.scss';
+@import url("https://fonts.googleapis.com/css2?family=Rokkitt:wght@500&display=swap");
+@import "../scss/reset.scss";
+@import "../scss/responsive.scss";
 $blue-primary: #69a9df;
 $accent-primary: #94d5ba;
 html {
-  font-family: 'Rokkitt', serif;
+  font-family: "Rokkitt", serif;
   font-size: 1rem;
   scroll-behavior: smooth;
 }
@@ -369,7 +369,7 @@ body {
     width: 90% !important;
     left: 5% !important;
     background-color: $blue-primary !important;
-    content: '';
+    content: "";
     position: absolute;
   }
 
@@ -389,7 +389,7 @@ body {
 
   .custom-underline::after,
   .selected::after {
-    content: '';
+    content: "";
     position: absolute;
   }
   .custom-underline,
@@ -738,7 +738,7 @@ a > img {
 .btn-theme-change {
   margin-left: 2rem;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1024px) {
   .hire-me {
     &__card {
       width: 7rem;
