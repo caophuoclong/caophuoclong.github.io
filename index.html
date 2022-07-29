@@ -1,1 +1,239 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"/><link rel="icon" href="/logo.ico"/><meta name="viewport" content="width=device-width,initial-scale=1"/><meta name="theme-color" content="#000000"/><meta name="description" content="Web site created using create-react-app"/><link rel="apple-touch-icon" href="/logo192.png"/><link rel="manifest" href="/manifest.json"/><title>Chat now!</title><script defer="defer" src="/static/js/main.8074a67f.js"></script><link href="/static/css/main.111e3a41.css" rel="stylesheet"></head><body><noscript>You need to enable JavaScript to run this app.</noscript><div id="root"></div></body></html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Phuoc Long</title>
+    <link
+      rel="icon"
+      href="./assets/icons/mylogo.svg"
+      type="image/svg"
+      sizes="16x16"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/2.1.0/showdown.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/TypewriterJS/2.19.0/core.min.js"
+      integrity="sha512-t4NGjfaRaGCjmiTGBsiG3w8FCp8ZY7dPlwZAXfeoGPARUT/rt3OP0NpQkblSgZy/2R8vPTXiEcq/zcWIJ8NusQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./assets/js/sweetalert2.min.js"></script>
+<link rel="stylesheet" href="./assets/css/sweetalert2.min.css">
+    <link rel="stylesheet" href="./assets/css/index.css" />
+
+    <script src="./assets/js/timeline.min.js"></script>
+    <link href="./assets/css/timeline.min.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- <div style="padding: 1rem; background-color: #F5F5F5; position: fixed; width: 100%; z-index: 100; box-sizing: border-box;" >
+      
+    </div> -->
+    
+    <header class="left-side">
+      <div class="left-side__brand__field">
+        <img src="./assets/icons/mylogo.svg" alt="this is logo" class="left-side__brand__field__logo">
+        <span class="left-side__brand__field__name">Phuoc Long</span>
+      </div>
+      <nav id="direct">
+        <!-- Insert from js -->
+      </nav>
+      <button class="btn-theme-change btn" onclick="Portfolio.toggleDarkMode()">Dark</button>
+      <button onclick="Portfolio.handleShowDirect()" class="btn-show-header btn">
+        <img src="./assets/icons/menu.svg" alt="">
+      </button>
+    </header>
+    <main>
+      <div class="notworking">My site not support your device resolution, maybe it too small!</div>
+      <div class="xyz" id="home">
+        <div class="intro">
+          <h1 class="xxas">Hi, Welcome to my portfolio</h1>
+          <div id="homeIntro"></div>
+          <h1>I'm a&nbsp;<span class="showUp"></span></h1>
+          <a
+            href="./assets/files/CV_Tran_Cao_Phuoc_Long.pdf"
+            download="CV_Tran_Cao_Phuoc_Long.pdf"
+            target="_blank"
+          >
+            DOWNLOAD CV
+            <img
+              src="./assets/icons/download.svg"
+              alt="download icon"
+              id="download-cv"
+            />
+          </a>
+        </div>
+      </div>
+      <div class="xyz" id="about">
+        <p class="title">WHO AM I?</p>
+        <p style="margin: 1rem 0; font-size: 2rem">
+          LET ME <span style="color: #69a9df">INTRODUCE</span> MYSELF
+        </p>
+        <div id="introMySelf"></div>
+        <div class="gh-contributors">
+          <p>This's my Github contributors time.</p>
+          <img
+            src="https://ghchart.rshah.org/69a9df/caophuoclong"
+            alt="Caophuoclong's Github chart"
+          />
+        </div>
+      </div>
+      
+      <div class="xyz skills" id="skills">
+        <p class="title">MY SPECIALITY</p>
+        <div class="skills__show">
+          
+        </div>
+      </div>
+
+      <div class="xyz" id="experiences">
+        <p class="title">EXPERIENCES</p>
+        <div class="timeline">
+          <div class="timeline__wrap">
+            <div class="timeline__items" id="expirence_timeline">
+              <div class="timeline__item">
+                <div class="timeline__content" title="Click to show more!">
+                  <div class="work">
+                    <span class="work__position">Customer Success Engineering</span>
+                    <!-- Where u work -->
+                    <span class="work__address">@Gcalls, VN</>
+                    <!-- Time -->
+                    <span class="work__time">Nov, 2021 - Mar, 2022</s>
+                    <ul class="work__description">
+                      <li>Code function</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="timeline__item">
+                <div class="timeline__content">Your content / markup</div>
+              </div>
+              <div class="timeline__item">
+                <div class="timeline__content">Your content / markup</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="xyz" id="projects">
+        <p class="title">MY PROJECTS</p>
+        <div class="project__items" id="project_list">
+          
+        </div>
+      </div>
+      <div class="xyz" id="education">
+        <p class="title">EDUCATION</p>
+        <div id="education-timeline">
+          <div class="education">
+            <img src="./assets/images/logo-ctu.png" alt="logo school" />
+            <div class="education__box">
+              <div class="education__majoring">
+                <h1>Software Engineering</h1>
+                <a href="http://cit.ctu.edu.vn/encict/">
+                  <img
+                    src="./assets/images/link_icon.png"
+                    alt="link to school's page"
+                    style="width: 1rem; height: 1rem"
+                  />
+                </a>
+              </div>
+              <p style="font-style: italic">@Can Tho University, Can Tho, VN</p>
+              <div class="education__line"></div>
+              <p>GPA: 3.2/4.0</p>
+              <p>Sep, 2019 - Apr, 2024</p>
+              <div class="education__line"></div>
+              <div>
+                <button onclick="Portfolio.tapToShow('show-more')">
+                  Tap to know more!
+                </button>
+                <div class="education__show-more hide" id="show-more">
+                  <div
+                    style="
+                      font-weight: 700;
+                      font-style: italic;
+                      font-size: 1rem;
+                      margin: 0.5rem 0;
+                    "
+                  >
+                    IMPORTANT COURSES IN UNDERGRADE
+                  </div>
+                  <ul role="list">
+                    <li>Data structure and algorithm</li>
+                    <li>C programing</li>
+                    <li>Web developing - SPA</li>
+                    <li>Object Oriented Programing with Java</li>
+                    <li>Design Pattern</li>
+                    <li>Planing Project</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="xyz" id="contact">
+        <p class="title">CONTACT</p>
+        <div class="hire-me">
+          <a class="hire-me__card" href="https://facebook.com/caophuoclonq" target="_blank">
+            <img
+              class="social-icons"
+              src="./assets/icons/facebook.svg"
+              alt="facebook-icon"
+              
+            />
+            <p class="truncate">@caophuoclonq</p>
+          </a>
+          <a class="hire-me__card " href="mailto:caophuoclong@duck.com">
+            <img class="social-icons" src="./assets/icons/mail.svg" alt="">
+            <p class="truncate" >caophuoclong@duck.com</p>
+          </a>   
+          <a class="hire-me__card " href="https://github.com/Caophuoclong" target="_blank">
+            <img class="social-icons" src="./assets/icons/github.svg" alt="">
+            <p class="truncate">@caophuoclong</p>
+          </a>        
+      </div>
+        <div class="contact">
+          
+          <div class="contact__card ">
+            <!-- <h1>Send me message!</h1> -->
+            <form class="form" id="myForm" action="#">
+              <h1>Send Message</h1>
+              <div class="form__group field">
+                <input type="text" class="form__field" placeholder="Name" name="name"/>
+                <label for="" class="form__label">Name</label>
+              </div>
+              <div class="form__group field">
+                <input type="text" class="form__field" placeholder="Subject" name="subject"/>
+                <label for="" class="form__label">Subject</label>
+              </div>
+              <div class="form__group field">
+                <input type="text" class="form__field" placeholder="Email" name="email"/>
+                <label for="" class="form__label">Email</label>
+              </div>
+              <div class="form__group field">
+                <textarea type="text" class="form__field" placeholder="Message" rows="5" resize name="message"></textarea>
+                <label for="" class="form__label">Message</label>
+              </div>
+              <input type="submit" class="btn-send" value="Send"/>
+            </form>
+          </div>
+          
+        </div>
+        
+      </div>
+    </main>
+    <div id="loading">
+      <div class="loading">
+  <div></div>
+  <div></div>
+  <div></div>
+</div>
+    </div>
+    <footer>
+
+    </footer>
+    <script src="./assets/js/obfuscated.js"></script>
+  </body>
+</html>
