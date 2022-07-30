@@ -219,7 +219,7 @@ class Portfolio {
         responsibility: "Design view, database, and implement the app.",
         members: 1,
         link: {
-          web: "https://caophuoclong.github.com",
+          web: "https://62e4a635c9d3743932ac8d41--phenomenal-bienenstitch-78ce6f.netlify.app/",
           github: "",
         },
       },
