@@ -331,13 +331,13 @@ ${techhh}
   }
   initIntro() {
     const introMySelf = `**Hi, I'm Tran Cao Phuoc Long**.\n
-I'm a senior student at **Can Tho University**, I'm majoring in **Software Engineering**. I expect graduated in Spring, 2024. \n
-I'm looking forward to work in a professional environment, that help me improve my skills and knowledge.\n
-I alway put my heart and soul into work, and I'm always looking for new opportunities to learn and grow.\n 
-I spent 6 months for learning ReactJS, TypeScript, NodeJS, Socket.io, and I'm very happy with the result.
-\nThrerefore, I'm looking forward to work with a team to build a better product.\n
-Apart from coding, I also like to play games, do sport and listen to music. \n
-That is all I have to share with you. Thank for reading.
+  I'm a senior student at **Can Tho University**, I'm majoring in **Software Engineering**. I expect graduated in Spring, 2024. \n
+  I'm looking forward to work in a professional environment, I think that help me improve my skills and knowledge.\n
+  I alway put my heart and soul into work, and I'm always looking for new opportunities to learn and grow.\n 
+  I spent 6 months for learning ReactJS, TypeScript, NodeJS, Socket.io, and I completed some [projects](/#projects) below. I hope you like that.\n
+  I'm looking for a job in **Frontend Developer**, **Backend Developer** even **Fullstack Developer** in JS/TS stack.\n
+  Apart from coding, I also like to play games, do sport and listen to music. \n
+  That is all I have to share with you. Thank for reading.
   `;
     const homeIntro = `
 In this site, you can find my resume, my skills, my work, and my contact.\n
