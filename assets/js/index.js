@@ -87,7 +87,6 @@ class Portfolio {
   }
   static handleShowDirect() {
     const navBar = document.querySelector("#direct");
-    console.log(navBar.style.display);
     if (navBar.style.visibility) {
       navBar.style.visibility = "";
     } else {
@@ -109,11 +108,9 @@ class Portfolio {
     e.preventDefault();
     const form = e.target;
     const name = form.name.value;
-    const subject = form.subject.value;
     const email = form.email.value;
     const message = form.message.value;
-    console.log($.ajax);
-    if (!name || !subject || !email || !message) {
+    if (!name || !email || !message) {
       Swal.fire({
         title: "Error!",
         text: "Please fill the full information!",
@@ -128,7 +125,7 @@ class Portfolio {
         type: "POST",
         data: {
           chat_id: "5323622268",
-          text: `- Name: ${name}\n - Email: ${email}\n - Subject: ${subject}\n - Message: ${message}\n`,
+          text: `- Name: ${name}\n - Email: ${email}\n - Message: ${message}\n`,
         },
         success: (data) => {
           Portfolio.showLoading(false);
@@ -159,7 +156,6 @@ class Portfolio {
     }
   }
   addSelected(selected) {
-    console.log(selected);
     const tag = document.querySelector(
       `[href="#${selected.split(" ")[0] || "home"}"]`
     );
@@ -219,7 +215,7 @@ class Portfolio {
         responsibility: "Design view, database, and implement the app.",
         members: 1,
         link: {
-          web: "https://caophuoclong.github.com",
+          web: "https://62e4a635c9d3743932ac8d41--phenomenal-bienenstitch-78ce6f.netlify.app/",
           github: "",
         },
       },
@@ -258,7 +254,7 @@ ${techhh}
 <div class="project__items__item__link">
   ${
     project.link.web.length > 0
-      ? `<a class="project__items__item__link__web" title="Website" href="${project.link.web}">
+      ? `<a class="project__items__item__link__web" title="Website" href="${project.link.web}" target="__blank">
       <img
           class='project__items__item__link__img'
           src="${this.iconWebSite["web"]}"
@@ -408,7 +404,6 @@ I code this project with **HTML5, CSS3 and JavaScript**.
       const url = window.location.href.split("#")[1];
       this.addSelected(url);
       const windowWidth = window.innerWidth;
-      console.log(windowWidth);
       if (windowWidth < 1024) {
         document.querySelector("#direct").style.visibility = "hidden";
       }

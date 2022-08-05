@@ -232,53 +232,73 @@
       </div> -->
       <div class="xyz" id="contact">
         <p class="title">CONTACT</p>
-        <div class="hire-me">
-          <a class="hire-me__card" href="https://facebook.com/caophuoclonq" target="_blank">
-            <img
-              class="social-icons"
-              src="./assets/icons/facebook.svg"
-              alt="facebook-icon"
+        <div class="contact-box">
+          <div class="hire-me">
+            <p>Contact me by filling this form</p>
+            <div class="exxx">
+              <a class="hire-me__contact-me" href="tel:0326031442">
+                <img src="./assets/icons/phone.svg" alt="">
+                <span class="text">+84 326 031 442</span>
+              </a>
+              <a class="hire-me__contact-me" href="mailto:caophuoclong@duck.com">
+                <img src="./assets/icons/gmail.svg" alt="">
+                  <span class="text">caophuoclong@duck.com</span>
+  
+              </a>
+              <a class="hire-me__contact-me" href="">
+                <img src="./assets/icons/position.svg" alt="">
+                
+                  <span class="text">Can Tho, Viet Nam</span>
+                
+              </a>
+            </div>
+            <div class="social">
+              <a class="hire-me__card " href="https://www.linkedin.com/in/caophuoclong/" target="_blank">
+                <img class="social-icons" src="./assets/icons/linkedin.svg" alt="">
+                <!-- <p class="truncate">@caophuoclong</p> -->
+              </a> 
+              <!-- <a class="hire-me__card" href="https://facebook.com/caophuoclonq" target="_blank">
+                <img
+                  class="social-icons"
+                  src="./assets/icons/facebook.svg"
+                  alt="facebook-icon"
+                />
+                <p class="truncate">@caophuoclonq</p>
+              </a> -->
+              <a class="hire-me__card " href="mailto:caophuoclong@duck.com">
+                <img class="social-icons" src="./assets/icons/mail.svg" alt="">
+                <!-- <p class="truncate" >caophuoclong@duck.com</p> -->
+              </a>   
+              <a class="hire-me__card " href="https://github.com/Caophuoclong" target="_blank">
+                <img class="social-icons" src="./assets/icons/github.svg" alt="">
+                <!-- <p class="truncate">@caophuoclong</p> -->
+              </a> 
               
-            />
-            <p class="truncate">@caophuoclonq</p>
-          </a>
-          <a class="hire-me__card " href="mailto:caophuoclong@duck.com">
-            <img class="social-icons" src="./assets/icons/mail.svg" alt="">
-            <p class="truncate" >caophuoclong@duck.com</p>
-          </a>   
-          <a class="hire-me__card " href="https://github.com/Caophuoclong" target="_blank">
-            <img class="social-icons" src="./assets/icons/github.svg" alt="">
-            <p class="truncate">@caophuoclong</p>
-          </a>        
-      </div>
-        <div class="contact">
-          
-          <div class="contact__card ">
-            <!-- <h1>Send me message!</h1> -->
-            <form class="form" id="myForm" action="#">
-              <h1>Send Message</h1>
-              <div class="form__group field">
-                <input type="text" class="form__field" placeholder="Name" name="name"/>
-                <label for="" class="form__label">Name</label>
-              </div>
-              <div class="form__group field">
-                <input type="text" class="form__field" placeholder="Subject" name="subject"/>
-                <label for="" class="form__label">Subject</label>
-              </div>
-              <div class="form__group field">
-                <input type="text" class="form__field" placeholder="Email" name="email"/>
-                <label for="" class="form__label">Email</label>
-              </div>
-              <div class="form__group field">
-                <textarea type="text" class="form__field" placeholder="Message" rows="5" resize name="message"></textarea>
-                <label for="" class="form__label">Message</label>
-              </div>
-              <input type="submit" class="btn-send" value="Send"/>
-            </form>
-          </div>
-          
+            </div>
+                   
         </div>
-        
+          <div class="contact">
+              <form class="form" id="myForm" action="#">
+                <div class="form__group field">
+                  <input type="text" class="form__field" placeholder="Name" name="name" id="name_form"/>
+                  <label for="name_form" class="form__label">Name</label>
+                </div>
+                <div class="form__group field">
+                  <input type="text" class="form__field" placeholder="Email" name="email" id="email_form"/>
+                  <label for="email_form" class="form__label">Email</label>
+                </div>
+                <div class="form__group field">
+                  <textarea id="message_form" type="text" class="form__field" placeholder="Message" rows="5" resize name="message"></textarea>
+                  <label for="message_form" class="form__label">Message</label>
+                </div>
+                <button type="submit" class="btn-send" >
+                  Send me message 
+                  <img src="./assets/icons/rocket.svg" alt="icon send message">
+                </button>
+                <!-- <input type="submit" class="btn-send" value="Send"/> -->
+              </form>            
+          </div>
+        </div>        
       </div>
     </main>
     <div id="loading">

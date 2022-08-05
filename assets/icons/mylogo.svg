@@ -10,7 +10,8 @@
    inkscape:export-filename="bitmap.svg"
    inkscape:export-xdpi="5.0799999"
    inkscape:export-ydpi="5.0799999"
-   sodipodi:docname="plLogo.svg"
+   sodipodi:docname="mylogo.svg"
+   inkscape:version="1.2 (1:1.2.1+202207142221+cd75a1ee6d)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -27,8 +28,8 @@
      inkscape:document-units="mm"
      showgrid="false"
      inkscape:zoom="2.1014404"
-     inkscape:cx="237.45617"
-     inkscape:cy="309.78751"
+     inkscape:cx="210.80779"
+     inkscape:cy="119.44188"
      inkscape:window-width="1920"
      inkscape:window-height="1004"
      inkscape:window-x="0"
@@ -42,12 +43,6 @@
      inkscape:groupmode="layer"
      id="layer1"
      transform="translate(-84.334536,-39.107913)">
-    <circle
-       style="fill:#6a9cfd;fill-opacity:1;stroke-width:0.307304"
-       id="path2224-6"
-       cx="106.83453"
-       cy="61.607914"
-       r="22.5" />
     <g
        id="g2036"
        transform="matrix(0.00369635,0,0,-0.00438468,62.54008,107.60697)">

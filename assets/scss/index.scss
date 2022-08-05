@@ -81,9 +81,9 @@ body {
       margin: 1rem 0;
     }
     .xyz {
-      min-height: 30vh;
-      padding: 10rem 0;
+      min-height: 100vh;
       padding-top: 70px;
+      padding-bottom: 0.5rem;
       box-sizing: border-box;
     }
     #home {
@@ -99,6 +99,9 @@ body {
         width: 700px;
         height: 700px;
         margin-left: auto;
+        @media screen and (max-width: 1200px) {
+          display: none;
+        }
         img {
           width: 100%;
           height: 100%;
@@ -188,6 +191,7 @@ body {
           border-radius: 0.5rem;
           padding: 1rem;
           box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+          box-sizing: border-box;
         }
         &__line {
           height: 2px;
@@ -265,36 +269,7 @@ body {
         }
       }
     }
-    // #experiences {
-    // }
-    #contact {
-      display: flex;
-      flex-direction: column;
-    }
-    .hire-me {
-      margin-top: 1rem;
-      margin-bottom: 1rem;
-      display: flex;
-      div {
-        flex: 0 0 50%;
-      }
-    }
-    .contact {
-      display: flex;
-      gap: 0 1rem;
-      box-sizing: border-box;
-      margin: auto 0;
 
-      &__card {
-        box-sizing: border-box;
-        flex: 0 0 50%;
-        margin: 0 auto;
-        &__send {
-          padding: 2rem;
-          box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-        }
-      }
-    }
     #projects {
       .project__items {
         display: grid;
@@ -517,125 +492,6 @@ ul {
   }
 }
 
-.form {
-  $primary: #11998e;
-  $secondary: #38ef7d;
-  $black: #000;
-  $gray: #9b9b9b;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 20px;
-  padding: 5px;
-  border-radius: 4px;
-  font-weight: normal;
-  width: 100%;
-  h1 {
-    font-size: 1.5rem;
-    text-align: center;
-    margin: 5px 0;
-  }
-  .btn-send {
-    display: block;
-    background-color: $blue-primary;
-    color: #fff;
-    border: none;
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
-    cursor: pointer;
-    margin: 0 auto;
-    transition: 0.3s ease-out all;
-    &:hover {
-      background-color: $secondary;
-    }
-  }
-  .form__group {
-    box-sizing: border-box;
-    position: relative;
-    padding: 15px;
-    margin-top: 10px;
-    width: 100%;
-  }
-
-  .form__field {
-    font-family: inherit;
-    width: 100%;
-    border: 0;
-    border-bottom: 2px solid $gray;
-    outline: 0;
-    font-size: 1.2rem;
-    color: $black;
-    padding: 7px 0;
-    background: transparent;
-    transition: border-color 0.2s;
-    &::placeholder {
-      color: transparent;
-    }
-    &:placeholder-shown ~ .form__label {
-      font-size: 1.3rem;
-      cursor: text;
-      top: 20px;
-    }
-  }
-  .form__label {
-    position: absolute;
-    top: 0;
-    display: block;
-    transition: 0.2s;
-    font-size: 1rem;
-    color: $gray;
-  }
-
-  .form__field:focus {
-    ~ .form__label {
-      position: absolute;
-      top: 0;
-      display: block;
-      transition: 0.2s;
-      font-size: 1rem;
-      color: $blue-primary;
-      font-weight: 700;
-    }
-    padding-bottom: 6px;
-    font-weight: 700;
-    border-width: 3px;
-    border-image: linear-gradient(to right, $blue-primary, $secondary);
-    border-image-slice: 1;
-  }
-  /* reset input */
-  .form__field {
-    &:required,
-    &:invalid {
-      box-shadow: none;
-    }
-  }
-}
-.hire-me {
-  display: flex;
-  gap: 0 2rem;
-  justify-content: center;
-  &__card {
-    text-decoration: none;
-    justify-content: center;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem 0;
-    align-items: center;
-    // width: 7rem;
-    // height: 7rem;
-    border-radius: 5px;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    padding: 1rem 0.5rem;
-    img {
-      filter: invert(57%) sepia(99%) saturate(239%) hue-rotate(167deg)
-        brightness(93%) contrast(87%);
-    }
-    &:hover {
-      img {
-        transform: translateY(-5px);
-        transition: ease-in-out 0.5s all;
-      }
-    }
-  }
-}
-
 .truncate {
   width: 100%;
   white-space: nowrap;
@@ -687,13 +543,208 @@ ul {
 section {
   padding: 20px;
 }
-@media screen and (max-width: 1366px) {
+#contact {
+  min-height: 100vh;
+  position: relative;
+}
+.contact-box {
+  z-index: 1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  width: 55%;
+  margin: 0 auto;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  background-color: #02054b;
+  gap: 0.5rem;
+  & > * {
+    flex: 0 0 50%;
+    box-sizing: border-box;
+  }
+  .hire-me {
+    gap: 0 2rem;
+    display: flex;
+    flex-direction: column;
+    p {
+      text-align: center;
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: rgba(255, 255, 255, 0.753);
+    }
+    .social {
+      margin-top: auto;
+      display: flex;
+      gap: 0 1rem;
+      justify-content: center;
+    }
+    .exxx {
+      margin: auto 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .hire-me__contact-me {
+      gap: 0 1rem;
+      text-decoration: none;
+      margin: auto 0;
+      width: fit-content;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      margin: 1rem 0;
+      padding: 0.5rem;
+      border-radius: 8px;
+      .text {
+        color: #dce2ff;
+        font-size: 1.2rem;
+      }
+      transition: 0.3s ease-out all;
+      &:hover {
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px,
+          $blue-primary 0px 0px 0px 3px;
+      }
+    }
+    &__card {
+      img {
+        // filter: invert(33%) sepia(83%) saturate(3247%) hue-rotate(207deg)
+        //   brightness(97%) contrast(94%);
+        filter: invert(100%) sepia(94%) saturate(25%) hue-rotate(76deg)
+          brightness(105%) contrast(109%);
+      }
+      &:hover {
+        img {
+          transform: translateY(-5px);
+          transition: ease-in-out 0.5s all;
+        }
+      }
+    }
+  }
+  .contact {
+    gap: 0 1rem;
+    margin: auto 0;
+    padding: 0 2rem;
+    .form {
+      background: #fff;
+      $primary: #11998e;
+      $secondary: #38ef7d;
+      $black: #000;
+      $gray: #9b9b9b;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 20px;
+      padding: 5px;
+      border-radius: 4px;
+      font-weight: normal;
+      // width: 100%;
+      h1 {
+        font-size: 1.5rem;
+        text-align: center;
+        margin: 5px 0;
+      }
+      .btn-send {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        // background-color: $blue-primary;
+        background-color: #02054b;
+
+        color: #fff;
+        border: none;
+        padding: 0.5rem 1rem;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: 0.3s ease-out all;
+        font-size: 1rem;
+        font-weight: bold;
+        margin-left: 10px;
+        @media screen and (max-width: 1366px) {
+          width: 100%;
+          margin-left: 0;
+        }
+        &:hover {
+          box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px,
+            $blue-primary 0px 0px 0px 3px;
+        }
+        img {
+          filter: invert(100%) sepia(94%) saturate(25%) hue-rotate(76deg)
+            brightness(105%) contrast(109%);
+        }
+      }
+      .form__group {
+        box-sizing: border-box;
+        position: relative;
+        padding: 15px;
+        margin-top: 10px;
+        width: 100%;
+      }
+
+      .form__field {
+        font-family: inherit;
+        width: 100%;
+        border: 0;
+        border-bottom: 2px solid $gray;
+        outline: 0;
+        font-size: 1.2rem;
+        color: $black;
+        padding: 7px 0;
+        background: transparent;
+        transition: border-color 0.2s;
+        &::placeholder {
+          color: transparent;
+        }
+        &:placeholder-shown ~ .form__label {
+          font-size: 1.3rem;
+          cursor: text;
+          top: 20px;
+        }
+      }
+      .form__label {
+        position: absolute;
+        top: 0;
+        display: block;
+        transition: 0.2s;
+        font-size: 1rem;
+        color: $gray;
+        user-select: none;
+      }
+
+      .form__field:focus {
+        ~ .form__label {
+          position: absolute;
+          top: 0;
+          display: block;
+          transition: 0.2s;
+          font-size: 1rem;
+          color: $blue-primary;
+          font-weight: 500;
+        }
+        padding-bottom: 6px;
+        font-weight: 500;
+        border-width: 3px;
+        border-image: linear-gradient(to right, $blue-primary, $secondary);
+        border-image-slice: 1;
+      }
+      /* reset input */
+      .form__field {
+        &:required,
+        &:invalid {
+          box-shadow: none;
+        }
+      }
+    }
+  }
+}
+// Begining responsive
+
+@media screen and (max-width: 1024px) {
   body {
     display: block;
     width: 100%;
-    .xyz {
-      padding: 1rem;
-    }
     .left-side {
       display: flex;
       flex-direction: row;
@@ -713,6 +764,14 @@ section {
     main {
       margin: 0;
     }
+  }
+  .contact-box {
+    font-size: 0.5rem;
+    flex-direction: column;
+    position: unset;
+    top: 0;
+    left: 0;
+    transform: translate(0, 0);
   }
   body main #projects .project__items {
     grid-template-columns: repeat(2, 1fr);
@@ -754,9 +813,34 @@ a > img {
 .btn-theme-change {
   margin-left: 2rem;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .left-side__brand__field__name {
     display: none;
+  }
+  #education-timeline {
+    .education {
+      flex-direction: column;
+    }
+    .education__box {
+      width: 100% !important;
+    }
+  }
+  #contact {
+    .contact-box {
+      position: unset;
+      top: 0;
+      left: 0;
+      transform: translate(0, 0);
+      margin: 0;
+      width: auto;
+      box-sizing: border-box;
+      .hire-me {
+        padding: 0;
+      }
+      .contact {
+        padding: 0 0;
+      }
+    }
   }
 }
 @media screen and (max-width: 1024px) {
@@ -845,6 +929,7 @@ a > img {
     display: block;
   }
 }
+// End responsive
 #loading {
   width: 100vw;
   height: 100vh;
@@ -947,5 +1032,9 @@ $bluebell: #979fd0;
   main {
     background-color: #2e3440;
     color: #eceff4;
+  }
+  .left-side__brand__field__logo {
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(159deg)
+      brightness(103%) contrast(101%);
   }
 }
