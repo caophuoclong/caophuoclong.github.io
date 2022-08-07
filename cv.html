@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CV Web Developer</title>
+    <link rel="stylesheet" href="./assets/css/cv.css" media="all" />
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  </head>
+  <body>
+    <div id="capture">
+      <header>
+        <div class="name">
+          <p>Long Phuoc Tran Cao</p>
+        </div>
+        <div class="contact">
+          <div>
+            <p>Can Tho, Viet Nam</p>
+            <p>+84 326 031 442</p>
+            <p>caophuoclong@duck.com</p>
+          </div>
+          <a href="https://caophuoclong.github.io" target="_blank">
+            caophuoclong.github.io
+          </a>
+        </div>
+        <div class="line"></div>
+      </header>
+      <main>
+        <div class="col col1">
+          <div class="profile">
+            <div class="box-icons">
+              <img class="icons" src="./assets/icons/cv/account.svg" alt="" />
+              <span>Profile</span>
+            </div>
+            <div class="paragraph">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Obcaecati dolore accusantium saepe mollitia voluptas officiis
+              eveniet incidunt tempora, autem temporibus ullam aliquid
+              necessitatibus minima fugiat pariatur numquam dolorem in vel?
+            </div>
+          </div>
+          <div class="expirences">
+            <div class="box-icons">
+              <img class="icons" src="./assets/icons/cv/work.svg" alt="" />
+              <span>Work Expirences</span>
+            </div>
+            <div class="expirences__timeline">
+              <div class="expirences__timeline__time-address">
+                <div class="time">08/2021 - 11/2021</div>
+                <div class="address">CAN THO, VIET NAM</div>
+              </div>
+              <div class="expirences__timeline__title">
+                Intern Full-Stack Web Developer
+              </div>
+              <ul class="expirences__timeline__descriptions">
+                <li class="description">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque
+                  nobis rem ab necessitatibus error distinctio voluptatibus
+                  cupiditate sequi deleniti facilis quos voluptatem
+                  perspiciatis, sed neque voluptate, illo dignissimos quia quae.
+                </li>
+                <li class="description">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Architecto amet iste aut doloribus minus illum quas labore,
+                  blanditiis libero sunt quam laboriosam aspernatur, deleniti
+                  nam. Incidunt accusantium illo facilis asperiores?
+                </li>
+                <li class="description">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam
+                  explicabo quia veniam? Nihil enim eveniet quo modi! Autem
+                  itaque enim, fugiat ad inventore sed fugit consequatur et
+                  nostrum quisquam quasi.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col col2">
+          <div class="education">
+            <div class="box-icons">
+              <img class="icons" src="./assets/icons/cv/education.svg" alt="" />
+              <span>Education</span>
+            </div>
+            <div class="education__timeline">
+              <div class="education__timeline__time">09/2019 - 03/2024</div>
+              <div class="education__timeline__address">CAN THO, VIET NAM</div>
+              <div class="education__timeline__major">Software Engineering</div>
+              <div class="education__timeline__gpa">GPA: 3.2/4.0</div>
+              <ul class="education__timeline__descriptions">
+                <li class="description">OOP</li>
+                <li class="description">Plaing project</li>
+                <li class="description">Teamwork</li>
+                <li class="description">Algorithm and Data structures</li>
+              </ul>
+            </div>
+          </div>
+          <div class="skills">
+            <div class="box-icons">
+              <img
+                class="icons"
+                src="./assets/icons/cv/employee-skills.svg"
+                alt=""
+              />
+              <span>Skills</span>
+            </div>
+            <div class="my-skills">
+              <div class="language">
+                <span class="title">Programing Language</span>: Javascript, C,
+                Java, C#, Typescript
+              </div>
+              <div class="framework">
+                <span class="title">Framework</span>: ReactJS, NestJS, ExpressJS
+              </div>
+              <div class="database">
+                <span class="title">Database</span>: MongoDB, MySql, MSSQL
+              </div>
+              <div class="addition">
+                <span class="title">Addition skills</span>: Git, Heroku, Docker
+              </div>
+              <div class="oprating">
+                <span class="title">Operating system</span>: Linux, Windows
+              </div>
+            </div>
+          </div>
+          <div class="projects">
+            <div class="box-icons">
+              <img class="icons" src="./assets/icons/cv/ribbon.svg" alt="" />
+              <span>Project</span>
+            </div>
+            <div class="my-projects">
+              <div class="project">
+                <div class="project__name">CyberChat</div>
+                <div class="project__short-description">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Labore placeat aliquam repudiandae, consequuntur quod vero
+                  culpa. Eveniet itaque cum, corrupti, fugiat voluptatem
+                  explicabo cumque sed sapiente rerum laborum, alias autem!
+                </div>
+                <ul class="project__using">
+                  <li class="using">
+                    <span class="title">Front-End:</span>
+                    ReactJS Typescript, Tailwind CSS
+                  </li>
+                  <li class="using">
+                    <span class="title">Back-End:</span>
+                    ExpressJS, Socket.io, Typescript
+                  </li>
+                  <li class="using">
+                    <span class="title">Database:</span>
+                    MongoDB, Redis
+                  </li>
+                  <li class="using">
+                    <span class="title">Reponsibilities:</span>
+                    Do both frontend and backend, design database, design
+                    view,...
+                  </li>
+                  <li class="using">
+                    <span class="title">Link Demo</span>
+                    <a href="">CyberChat</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+    <button id="btn-download-cv">
+      <img src="./assets/icons/downloads.svg" alt="download my cv" />
+    </button>
+    <script src="./assets/js/cv.js"></script>
+  </body>
+</html>

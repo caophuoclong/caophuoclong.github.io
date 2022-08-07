@@ -1,0 +1,247 @@
+@import "../scss/reset.scss";
+$header_height: 10rem;
+$pink: #f3989a;
+@media print {
+}
+body {
+  line-height: 1;
+  min-height: 100vh;
+  box-sizing: border-box;
+  padding: 0 20%;
+  font-size: 12px;
+  font-family: "Roboto", sans-serif;
+  position: relative;
+  #capture > * {
+    box-sizing: border-box;
+  }
+  header {
+    height: $header_height;
+    .line {
+      border-top: 1px solid black;
+      width: 95%;
+      margin: 0 auto;
+      margin-top: 0.5rem;
+    }
+    .name {
+      height: 70%;
+      background-color: #296bef;
+      position: relative;
+      p {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, 50%);
+        color: #000;
+        font-size: 2.5rem;
+        font-weight: bold;
+        text-align: center;
+        padding: 1rem 1rem;
+        border-radius: 12px;
+        background: $pink;
+      }
+    }
+    .contact {
+      height: 30%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-top: 3rem;
+      gap: 0.5rem;
+      & > div:first-child {
+        display: flex;
+        gap: 0 1rem;
+        p {
+          &:nth-child(2) {
+            border: 3px solid $pink;
+            border-top: none;
+            border-bottom: none;
+            padding: 0 1rem;
+          }
+        }
+      }
+    }
+  }
+  main {
+    padding: 0.5rem 0;
+    min-height: calc(100vh - (#{$header_height}));
+    display: flex;
+    gap: 0.5rem;
+    position: relative;
+    padding-top: 3.5rem;
+
+    .col {
+      flex: 0 0 50%;
+      margin: 1rem 0;
+      position: relative;
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        width: 1px;
+        height: 100%;
+        background-color: #000;
+      }
+      &:first-child {
+        &::after {
+          right: 0;
+          transform: translateX(400%);
+        }
+      }
+      &:last-child {
+        &::after {
+          left: 0;
+          transform: translateX(-400%);
+        }
+      }
+    }
+    .col1 {
+      // background-color: #296bef;
+    }
+    .col2 {
+      // background-color: #f3989a;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      background-color: black;
+      opacity: 0.5;
+      width: 95%;
+      height: 2px;
+      transform: translateX(-50%);
+    }
+  }
+  .paragraph {
+    padding-left: 1rem;
+    font-size: 1.2em;
+    line-height: 1.5;
+    padding: 0.5rem;
+  }
+  .box-icons {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    span {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+    .icons {
+      border-radius: 100rem;
+      background-color: #f3989a;
+      width: 2rem;
+      height: 2rem;
+    }
+  }
+  .expirences {
+    &__timeline {
+      // margin: 1rem 0;
+      padding: 0.5rem;
+
+      &__time-address {
+        display: flex;
+        justify-content: flex-start;
+        gap: 1rem;
+        font-size: 0.9rem;
+      }
+      &__title {
+        font-size: 1.3rem;
+        font-weight: bold;
+      }
+      &__descriptions {
+        padding-left: 1.5rem;
+        .description {
+          list-style-type: disc;
+          margin: 0.5rem 0;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+  .education {
+    &__timeline {
+      padding: 0.5rem;
+      &__time {
+        font-size: 0.9rem;
+        font-style: italic;
+      }
+      &__address {
+        font-size: 0.9rem;
+        font-style: italic;
+      }
+      &__major {
+        font-size: 1.4rem;
+        font-weight: bold;
+      }
+      &__gpa {
+        font-size: 1rem;
+      }
+      &__descriptions {
+        padding: 0 2rem;
+        .description {
+          list-style: disc;
+          font-size: 1.2em;
+        }
+      }
+    }
+  }
+  .skills {
+    .my-skills {
+      padding: 0.5rem;
+      & > div {
+        margin: 0.5rem 0;
+        font-size: 1rem;
+        span.title {
+          font-weight: bold;
+        }
+      }
+    }
+  }
+  .projects {
+    .my-projects {
+      padding: 0.5rem;
+      .project {
+        display: flex;
+        flex-direction: column;
+        gap: 0.2rem;
+        &__name {
+          font-size: 1.4rem;
+        }
+        &__short-description {
+          font-size: 0.8rem;
+          margin-left: 0.5rem;
+        }
+        &__using {
+          margin-left: 1rem;
+          .using {
+            list-style: disc;
+            margin: 0.2rem 0;
+            font-size: 0.9rem;
+            .title {
+              font-weight: bold;
+            }
+          }
+        }
+      }
+    }
+  }
+  #btn-download-cv {
+    position: absolute;
+    bottom: 5rem;
+    right: 2rem;
+    // background-color: transparent;
+    border: none;
+    outline: none;
+    box-shadow: rgba(31, 211, 15, 0.16) 0px 1px 4px,
+      rgb(0, 235, 31) 0px 0px 0px 3px;
+    border-radius: 100rem;
+    background-color: rgb(0, 235, 31);
+    img {
+      filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(347deg)
+        brightness(102%) contrast(101%);
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+  }
+}
