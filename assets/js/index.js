@@ -27,6 +27,8 @@ class Portfolio {
     SASS: this.imgPath + "sass-lang-icon.svg",
     Sun: this.imgPath + "sun.svg",
     Dark: this.imgPath + "dark.svg",
+    NestJS: this.imgPath + "nestjs.png",
+    ChakraUI: this.imgPath + "chakraui.svg",
   };
   mySkills = [
     "HTML5",
@@ -201,22 +203,24 @@ class Portfolio {
   initProjectShow() {
     const projects = [
       {
-        name: "Chat App",
-        image: "./assets/images/projects/chatapp.png",
+        name: "Bebe's",
+        id: "bebes",
+        image: "./assets/images/projects/bebes.png",
+        imageDark: "./assets/images/projects/bebes-dark.png",
         technicals: [
           "ReactJS",
-          "NodeJS",
+          "NestJS",
           "Socket.io",
           "TypeScript",
-          "TailwindCSS",
+          "ChakraUI",
         ],
         descriptions:
-          "- Application allow user can communicate with another user.\n - New feeds.\n - Send Message ",
+          "- An Application allows users can communicate with another user.\n It's like some another apps such as Facebook Messenger, Zalo, Viber, ...",
         responsibility: "Design view, database, and implement the app.",
         members: 1,
         link: {
-          web: "https://62e4a635c9d3743932ac8d41--phenomenal-bienenstitch-78ce6f.netlify.app/",
-          github: "",
+          web: "https://bebes.site",
+          github: "https://github.com/caophuoclong/chatapp.git",
         },
       },
     ];
@@ -236,7 +240,7 @@ class Portfolio {
       projectsHTML += `
 <div class="tile bottom-right">
 <div class="project__items__item ">
-<img class="project__items__item__image " src="${project.image}" alt="">
+<img id="${project.id}"  class="project__items__item__image " alt="">
 <p class="project__items__item__name">${project.name}</p>
 <!-- Paragraph description -->
 <div class="project__items__item__responsibility">
@@ -271,7 +275,7 @@ ${techhh}
       >
         <img
           class='project__items__item__link__img'
-          src="${iconWeb["github"]}"
+          src="${this.iconWebSite["github"]}"
         />
       </a>`
       : ""
@@ -359,9 +363,11 @@ I code this project with **HTML5, CSS3 and JavaScript**.
     if (body.classList.contains("dark-mode")) {
       body.classList.remove("dark-mode");
       btn.innerHTML = `<img src="${portfolio.iconLanguagePath.Dark}"/>`;
+      document.getElementById("bebes").src= "./assets/images/projects/bebes.png"
     } else {
       body.classList.add("dark-mode");
       btn.innerHTML = `<img src="${portfolio.iconLanguagePath.Sun}"/>`;
+      document.getElementById("bebes").src= "./assets/images/projects/bebes-dark.png"
     }
     window.localStorage.setItem(
       "dark-mode",
@@ -376,7 +382,8 @@ I code this project with **HTML5, CSS3 and JavaScript**.
       const body = document.querySelector("body");
       const isDark = window.localStorage.getItem("dark-mode");
       const btn = document.querySelector(".btn-theme-change");
-      if (isDark) {
+      console.log(isDark);
+      if (isDark !== "false") {
         body.classList.add("dark-mode");
         btn.innerHTML = `<img src="${portfolio.iconLanguagePath.Sun}"/>`;
       } else {

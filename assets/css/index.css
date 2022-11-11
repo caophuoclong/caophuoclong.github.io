@@ -847,9 +847,6 @@ a > img {
   background-color: #434c5e !important;
   color: #d8dee9; }
 
-.dark-mode .project__items__item__image {
-  filter: invert(98%) sepia(3%) saturate(1409%) hue-rotate(181deg) brightness(100%) contrast(89%); }
-
 .dark-mode #home .intro a {
   color: #d8dee9 !important; }
   .dark-mode #home .intro a img {
