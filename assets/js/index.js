@@ -386,9 +386,12 @@ I code this project with **HTML5, CSS3 and JavaScript**.
       if (isDark !== "false") {
         body.classList.add("dark-mode");
         btn.innerHTML = `<img src="${portfolio.iconLanguagePath.Sun}"/>`;
+        document.getElementById("bebes").src= "./assets/images/projects/bebes-dark.png"
       } else {
         body.classList.remove("dark-mode");
         btn.innerHTML = `<img src="${portfolio.iconLanguagePath.Dark}"/>`;
+              document.getElementById("bebes").src= "./assets/images/projects/bebes.png"
+
       }
     });
     window.addEventListener("resize", () => {
