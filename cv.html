@@ -6,170 +6,121 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CV Web Developer</title>
     <link rel="stylesheet" href="./assets/css/cv.css" media="all" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono">
     <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
   </head>
   <body>
     <div id="capture">
-      <header>
-        <div class="name">
-          <p>Long Phuoc Tran Cao</p>
-        </div>
-        <div class="contact">
-          <div>
-            <p>Can Tho, Viet Nam</p>
-            <p>+84 326 031 442</p>
-            <p>caophuoclong@duck.com</p>
-          </div>
-          <a href="https://caophuoclong.github.io" target="_blank">
-            caophuoclong.github.io
-          </a>
-        </div>
-        <div class="line"></div>
-      </header>
-      <main>
-        <div class="col col1">
-          <div class="profile">
-            <div class="box-icons">
-              <img class="icons" src="./assets/icons/cv/account.svg" alt="" />
-              <span>Profile</span>
-            </div>
-            <div class="paragraph">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Obcaecati dolore accusantium saepe mollitia voluptas officiis
-              eveniet incidunt tempora, autem temporibus ullam aliquid
-              necessitatibus minima fugiat pariatur numquam dolorem in vel?
-            </div>
-          </div>
-          <div class="expirences">
-            <div class="box-icons">
-              <img class="icons" src="./assets/icons/cv/work.svg" alt="" />
-              <span>Work Expirences</span>
-            </div>
-            <div class="expirences__timeline">
-              <div class="expirences__timeline__time-address">
-                <div class="time">08/2021 - 11/2021</div>
-                <div class="address">CAN THO, VIET NAM</div>
-              </div>
-              <div class="expirences__timeline__title">
-                Intern Full-Stack Web Developer
-              </div>
-              <ul class="expirences__timeline__descriptions">
-                <li class="description">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque
-                  nobis rem ab necessitatibus error distinctio voluptatibus
-                  cupiditate sequi deleniti facilis quos voluptatem
-                  perspiciatis, sed neque voluptate, illo dignissimos quia quae.
-                </li>
-                <li class="description">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Architecto amet iste aut doloribus minus illum quas labore,
-                  blanditiis libero sunt quam laboriosam aspernatur, deleniti
-                  nam. Incidunt accusantium illo facilis asperiores?
-                </li>
-                <li class="description">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam
-                  explicabo quia veniam? Nihil enim eveniet quo modi! Autem
-                  itaque enim, fugiat ad inventore sed fugit consequatur et
-                  nostrum quisquam quasi.
-                </li>
-              </ul>
-            </div>
+      <div id="info">
+        <p class="name">Tran Cao Phuoc Long</p>
+        <p class="job-title">Web Developer</p>
+      </div>
+      <div id="main">
+        <div id="left">
+          <div class="overview">
+            <h2 class="title">Overview</h2>
+            <p class="content" style="line-height: 1.5">
+              &emsp;&emsp;I'm a senior student at Can Tho University
+              in Software Engineering. I want to learn
+              knowledge and experience from everybody
+              at the company through the internship. I
+              always try my best to improve my skills.
+            </p>
           </div>
         </div>
-        <div class="col col2">
-          <div class="education">
-            <div class="box-icons">
-              <img class="icons" src="./assets/icons/cv/education.svg" alt="" />
-              <span>Education</span>
-            </div>
-            <div class="education__timeline">
-              <div class="education__timeline__time">09/2019 - 03/2024</div>
-              <div class="education__timeline__address">CAN THO, VIET NAM</div>
-              <div class="education__timeline__major">Software Engineering</div>
-              <div class="education__timeline__gpa">GPA: 3.2/4.0</div>
-              <ul class="education__timeline__descriptions">
-                <li class="description">OOP</li>
-                <li class="description">Plaing project</li>
-                <li class="description">Teamwork</li>
-                <li class="description">Algorithm and Data structures</li>
-              </ul>
-            </div>
-          </div>
-          <div class="skills">
-            <div class="box-icons">
-              <img
-                class="icons"
-                src="./assets/icons/cv/employee-skills.svg"
-                alt=""
-              />
-              <span>Skills</span>
-            </div>
-            <div class="my-skills">
-              <div class="language">
-                <span class="title">Programing Language</span>: Javascript, C,
-                Java, C#, Typescript
-              </div>
-              <div class="framework">
-                <span class="title">Framework</span>: ReactJS, NestJS, ExpressJS
-              </div>
-              <div class="database">
-                <span class="title">Database</span>: MongoDB, MySql, MSSQL
-              </div>
-              <div class="addition">
-                <span class="title">Addition skills</span>: Git, Heroku, Docker
-              </div>
-              <div class="oprating">
-                <span class="title">Operating system</span>: Linux, Windows
-              </div>
-            </div>
-          </div>
-          <div class="projects">
-            <div class="box-icons">
-              <img class="icons" src="./assets/icons/cv/ribbon.svg" alt="" />
-              <span>Project</span>
-            </div>
-            <div class="my-projects">
-              <div class="project">
-                <div class="project__name">CyberChat</div>
-                <div class="project__short-description">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Labore placeat aliquam repudiandae, consequuntur quod vero
-                  culpa. Eveniet itaque cum, corrupti, fugiat voluptatem
-                  explicabo cumque sed sapiente rerum laborum, alias autem!
-                </div>
-                <ul class="project__using">
-                  <li class="using">
-                    <span class="title">Front-End:</span>
-                    ReactJS Typescript, Tailwind CSS
-                  </li>
-                  <li class="using">
-                    <span class="title">Back-End:</span>
-                    ExpressJS, Socket.io, Typescript
-                  </li>
-                  <li class="using">
-                    <span class="title">Database:</span>
-                    MongoDB, Redis
-                  </li>
-                  <li class="using">
-                    <span class="title">Reponsibilities:</span>
-                    Do both frontend and backend, design database, design
-                    view,...
-                  </li>
-                  <li class="using">
-                    <span class="title">Link Demo</span>
-                    <a href="">CyberChat</a>
-                  </li>
+        <div id="right">
+          <div class="heading experiences">
+            <h2 class="title">Experiences</h2>
+            <ul>
+              <li>
+                <h3 class="title">Fresher Web Fullstack at Gcalls</h3>
+                <p class="date">01/2022 - 03/2022</p>
+                <ul class="content">
+                  <li>Working on micro services project (developing feature, maintaining system, deploying,...)</li>
+                  <li>Mange  an internal chat application</li>
                 </ul>
-              </div>
-            </div>
+              </li>
+              <li>
+                <h3 class="title">Intern Web Fullstack at Gcalls</h3>
+                <p class="date">08/2021 - 11/2021</p>
+                <ul class="content">
+                  <li>Building a website that allow to crawl data using puperteer</li>
+                  <li>Developing callbox</li>
+                  <li>Manual test production app</li>
+                  <li>Maintaining and developing <i><b>Script</b></i> that manage staff (check in, check out, day off,.e.t.c)</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <div class="heading projects">
+            <h2 class="title">Projects</h2>
+            <ul>
+              <li>
+                <h3 class="title">Chat application named Bebe's</h3>
+                <h4 class="description">Description:  </h4>
+                <p class="description_content content">&emsp;&emsp;This is a website that allow users can communicate with other users, it look likes Messenger, What's App. But with less feature than.</p>
+                <h4>Technical: </h4>
+                <ul class="technical">
+                  <li class="content">Frontend: ReactJS, Chakra UI</li>
+                  <li class="content">Backend: NestJS</li>
+                  <li class="content">Database: MySQL, Redis</li>
+                  <li class="content">Operating: Linux</li>
+                </ul>
+                <h4>Responsibilities: </h4>
+                <ul class="responsibility">
+                  <li class="content">Design (UI, database,... ), do both frontend and backend</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <div class="heading education">
+            <h2 class="title">Education</h2>
+            <ul>
+              <li style="line-height: 1.2;">
+                  <h3 class="school-name title">Can Tho University</h3>
+                  <p style="font-size: 10px;"><i><b>Software Engineering</b></i></p>
+                  <p class="content">GPA: 3.11/4.0</p>
+                  <p class="content">Details: Learn testing, documentation, work group,...</p>
+              </li>
+            </ul>
+          </div>
+          <div class="heading skills" style="line-height: 1.2;">
+            <h2 class="title">Skills</h2>
+            <ul>
+              <li style="list-style-type: none;">
+                <h3 class="title">Soft skills</h3>
+                <ul>
+                  <li class="content">Research: Skilled in interviewing, collecting and anylizing data</li>
+                  <li class="content">Documentation: Skilled in translation engineering documents, articles,...</li>
+                </ul>
+              </li>
+              <li style="list-style: none;">
+                <h3 class="title">Coding/Programing</h3>
+                <ul>
+                  <li class="content">Adaptable to new programing language with little instruction</li>
+                  <li class="content">HTML, CSS, Javascript</li>
+                  <li class="content">ReactJS, NodeJS, NestJS</li>
+                  <li class="content">MySQL, MongoDB, Redis</li>
+                  <li class="content">Git, Docker</li>
+                  <li class="content">Have a basic knowledge about C#, .NET framework</li>
+                  <li class="content">Linux</li>
+                </ul>
+              </li>
+            </ul>
+            
+            
           </div>
         </div>
-      </main>
+      </div>
     </div>
-    <button id="btn-download-cv">
-      <img src="./assets/icons/downloads.svg" alt="download my cv" />
-    </button>
+    <a  class="btn-download-cv"href="./assets/files/CV_Tran_Cao_Phuoc_Long_WebDevelopment.pdf" title="Download my CV" download="CV_Tran_Cao_Phuoc_Long_WebDevelopment.pdf">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+        <!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+        <path
+          d="M344 240h-56L287.1 152c0-13.25-10.75-24-24-24h-16C234.7 128 223.1 138.8 223.1 152L224 240h-56c-9.531 0-18.16 5.656-22 14.38C142.2 263.1 143.9 273.3 150.4 280.3l88.75 96C243.7 381.2 250.1 384 256.8 384c7.781-.3125 13.25-2.875 17.75-7.844l87.25-96c6.406-7.031 8.031-17.19 4.188-25.88S353.5 240 344 240zM256 0C114.6 0 0 114.6 0 256s114.6 256 256 256s256-114.6 256-256S397.4 0 256 0zM256 464c-114.7 0-208-93.31-208-208S141.3 48 256 48s208 93.31 208 208S370.7 464 256 464z" />
+      </svg>
+    </a>
     <script src="./assets/js/cv.js"></script>
   </body>
 </html>

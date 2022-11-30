@@ -103,6 +103,9 @@ table {
 textarea {
   resize: none; }
 
+* {
+  font-family: "Roboto Mono", sans-serif; }
+
 body {
   line-height: 1;
   min-height: 100vh;
@@ -111,158 +114,68 @@ body {
   font-size: 12px;
   font-family: "Roboto", sans-serif;
   position: relative; }
-  body #capture > * {
-    box-sizing: border-box; }
-  body header {
-    height: 10rem; }
-    body header .line {
-      border-top: 1px solid black;
-      width: 95%;
-      margin: 0 auto;
-      margin-top: 0.5rem; }
-    body header .name {
-      height: 70%;
-      background-color: #296bef;
-      position: relative; }
-      body header .name p {
-        position: absolute;
-        bottom: 0;
-        left: 50%;
-        transform: translate(-50%, 50%);
-        color: #000;
-        font-size: 2.5rem;
-        font-weight: bold;
-        text-align: center;
-        padding: 1rem 1rem;
-        border-radius: 12px;
-        background: #f3989a; }
-    body header .contact {
-      height: 30%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      margin-top: 3rem;
-      gap: 0.5rem; }
-      body header .contact > div:first-child {
-        display: flex;
-        gap: 0 1rem; }
-        body header .contact > div:first-child p:nth-child(2) {
-          border: 3px solid #f3989a;
-          border-top: none;
-          border-bottom: none;
-          padding: 0 1rem; }
-  body main {
-    padding: 0.5rem 0;
-    min-height: calc(100vh - (10rem));
+  body #capture {
+    padding: 5% 0 0 0;
+    background-color: aliceblue;
     display: flex;
-    gap: 0.5rem;
-    position: relative;
-    padding-top: 3.5rem; }
-    body main .col {
-      flex: 0 0 50%;
-      margin: 1rem 0;
-      position: relative; }
-      body main .col::after {
-        content: "";
-        position: absolute;
-        top: 0;
-        width: 1px;
-        height: 100%;
-        background-color: #000; }
-      body main .col:first-child::after {
-        right: 0;
-        transform: translateX(400%); }
-      body main .col:last-child::after {
-        left: 0;
-        transform: translateX(-400%); }
-    body main::after {
-      content: "";
-      position: absolute;
-      bottom: 10px;
-      left: 50%;
-      background-color: black;
-      opacity: 0.5;
-      width: 95%;
-      height: 2px;
-      transform: translateX(-50%); }
-  body .paragraph {
-    padding-left: 1rem;
-    font-size: 1.2em;
-    line-height: 1.5;
-    padding: 0.5rem; }
-  body .box-icons {
-    display: flex;
-    gap: 0.5rem;
-    align-items: center; }
-    body .box-icons span {
+    flex-direction: column; }
+    body #capture #info .name {
+      font-size: 5rem;
+      font-weight: 700;
+      margin: 0;
+      padding: 0;
+      text-align: center; }
+    body #capture #info .job-title {
       font-size: 1.5rem;
-      font-weight: bold; }
-    body .box-icons .icons {
-      border-radius: 100rem;
-      background-color: #f3989a;
-      width: 2rem;
-      height: 2rem; }
-  body .expirences__timeline {
-    padding: 0.5rem; }
-    body .expirences__timeline__time-address {
-      display: flex;
-      justify-content: flex-start;
-      gap: 1rem;
-      font-size: 0.9rem; }
-    body .expirences__timeline__title {
-      font-size: 1.3rem;
-      font-weight: bold; }
-    body .expirences__timeline__descriptions {
-      padding-left: 1.5rem; }
-      body .expirences__timeline__descriptions .description {
-        list-style-type: disc;
-        margin: 0.5rem 0;
+      font-weight: 500;
+      text-align: center;
+      letter-spacing: 0.2rem; }
+    body #capture #main {
+      margin: 1rem 0;
+      width: 100%;
+      border-top: 2px solid black;
+      display: flex; }
+      body #capture #main .content {
         font-size: 14px; }
-  body .education__timeline {
-    padding: 0.5rem; }
-    body .education__timeline__time {
-      font-size: 0.9rem;
-      font-style: italic; }
-    body .education__timeline__address {
-      font-size: 0.9rem;
-      font-style: italic; }
-    body .education__timeline__major {
-      font-size: 1.4rem;
-      font-weight: bold; }
-    body .education__timeline__gpa {
-      font-size: 1rem; }
-    body .education__timeline__descriptions {
-      padding: 0 2rem; }
-      body .education__timeline__descriptions .description {
-        list-style: disc;
-        font-size: 1.2em; }
-  body .skills .my-skills {
-    padding: 0.5rem; }
-    body .skills .my-skills > div {
-      margin: 0.5rem 0;
-      font-size: 1rem; }
-      body .skills .my-skills > div span.title {
-        font-weight: bold; }
-  body .projects .my-projects {
-    padding: 0.5rem; }
-    body .projects .my-projects .project {
-      display: flex;
-      flex-direction: column;
-      gap: 0.2rem; }
-      body .projects .my-projects .project__name {
-        font-size: 1.4rem; }
-      body .projects .my-projects .project__short-description {
-        font-size: 0.8rem;
-        margin-left: 0.5rem; }
-      body .projects .my-projects .project__using {
-        margin-left: 1rem; }
-        body .projects .my-projects .project__using .using {
-          list-style: disc;
-          margin: 0.2rem 0;
-          font-size: 0.9rem; }
-          body .projects .my-projects .project__using .using .title {
-            font-weight: bold; }
+      body #capture #main h2.title {
+        font-size: 1.5rem;
+        margin: .5rem 0;
+        font-weight: 700; }
+      body #capture #main #left {
+        min-height: 1rem;
+        border-right: 1px solid black;
+        width: 35%;
+        padding: 0 0 0rem 1rem; }
+      body #capture #main #right {
+        min-height: 1rem;
+        border-left: 1px solid black;
+        padding-left: 1rem; }
+        body #capture #main #right .heading h3.title {
+          font-size: 1rem;
+          font-weight: 700;
+          margin: 0;
+          padding: 0; }
+        body #capture #main #right .heading ul {
+          margin-left: 2rem; }
+          body #capture #main #right .heading ul > li {
+            margin: .5rem 0;
+            list-style: disc; }
+          body #capture #main #right .heading ul li > .date {
+            font-size: 0.8rem;
+            font-weight: 500;
+            font-style: italic;
+            margin: .2rem 0;
+            padding: 0; }
+          body #capture #main #right .heading ul li ul > li {
+            list-style: circle; }
+          body #capture #main #right .heading ul li h4 {
+            margin-top: .5rem; }
+          body #capture #main #right .heading ul li h4:first {
+            margin-bottom: .5rem;
+            margin-top: 0rem; }
+          body #capture #main #right .heading ul li .description_content {
+            padding-top: .2rem;
+            width: 400px; }
   body #btn-download-cv {
     position: absolute;
     bottom: 5rem;
@@ -276,3 +189,11 @@ body {
       filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(347deg) brightness(102%) contrast(101%);
       width: 1.5rem;
       height: 1.5rem; }
+
+.btn-download-cv {
+  bottom: 2rem;
+  right: 5rem;
+  position: fixed;
+  width: 2rem;
+  height: 2rem;
+  fill: cadetblue; }
