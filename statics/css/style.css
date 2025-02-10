@@ -1,3 +1,8 @@
+html {
+  overflow: hidden;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
 body {
   font-family: "Adigiana", sans-serif;
   width: 100vw;
@@ -24,8 +29,8 @@ body {
 }
 
 .bear {
-  max-width: 250px;
-  height: 250px;
+  max-width: 200px;
+  height: 200px;
 }
 .fly-heart {
   width: 15%;
