@@ -205,7 +205,7 @@ window.onload = function () {
   const today = new Date();
   const valentineDay = new Date(today.getFullYear(), 1, 14);
   const container = document.getElementById('container');
-  if (today.getTime() < valentineDay.getTime()) {
+  if (today.getTime() >= valentineDay.getTime()) {
     newContainer()
     container.style.display = 'none';
   } else {
