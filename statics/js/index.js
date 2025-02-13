@@ -108,57 +108,51 @@ letterContainer.appendChild(rightFlower);
 
 letter.style = `
 font-family: 'Caveat', cursive;
-padding: 20px 40px;
+padding: 15px 25px;
 box-sizing: border-box;
 color: #d84a3c;
-font-size: 30px
+font-size: 28px
 `
 
 const contents = [
   {
-    content: "to",
+    content: "To my love,",
     class: "caveat-bold",
     style: "",
     tag: "p"
   },
   {
-    content: "the love of my life, Minh Anh",
-    class: "caveat-regular sentence-border-bottom",
-    style: "margin-top: 10px",
-    tag: "p"
-  },
-  {
-    content: "Happy Valentine’s Day!",
+    content: "Happy Valentine’s Day! ❤️",
     class: "caveat-regular sentence-border-bottom",
     style: "margin-top: 20px",
     tag: "p"
   },
   {
-    content: "Every moment with you",
+    content: "Thank you for coming into my life.",
+    class: "caveat-regular sentence-border-bottom",
+    style: "margin-top: 10px",
+    tag: "p"
+  },
+  {
+    content: "I wish for us to be together always",
     class: "caveat-regular sentence-border-bottom",
     style: "margin-top: 5px",
     tag: "p"
   },
   {
-    content: "is a dream come true,",
+    content: "and see your beautiful smile every day.",
     class: "caveat-regular sentence-border-bottom",
     style: "margin-top: 5px",
     tag: "p"
   },
   {
-    content: "and I cherish you",
+    content: "You are my greatest treasure.",
     class: "caveat-regular sentence-border-bottom",
     style: "margin-top: 5px",
     tag: "p"
   },
   {
-    content: "more than words can say.",
-    class: "caveat-regular sentence-border-bottom",
-    style: "margin-top: 5px",
-    tag: "p"
-  },
-  {
-    content: "Your love, Long",
+    content: "Your greatest boyfriend,",
     class: "caveat-bold",
     style: "margin-top: 20px",
     tag: "p"
@@ -208,33 +202,57 @@ function typewriter() {
 
 
 window.onload = function () {
-  // Check current date is Valentine's day
   const today = new Date();
   const valentineDay = new Date(today.getFullYear(), 1, 14);
-  // If today is not valentine day, create a new div with class new-heart and display it overall
-  if (today.getTime() !== valentineDay.getTime()) {
-    const newHeart = document.createElement('div');
-    newHeart.classList.add('new-heart');
-    // Remove container and add new heart
-    document.getElementById("container").remove();
-    document.body.style = `
+  const container = document.getElementById('container');
+  if (today.getTime() < valentineDay.getTime()) {
+    newContainer()
+    container.style.display = 'none';
+  } else {
+    container.style.display = 'none';
+    newContainer()
+    const newContainer1 = document.getElementById('new-container');
+    newContainer1.style.transition = 'opacity 1s ease';
+    newContainer1.style.opacity = '1';
+    setTimeout(() => {
+      newContainer1.style.opacity = '0';
+      setTimeout(() => {
+        newContainer1.style.display = 'none';
+        container.style.display = 'flex';
+      }, 900);
+    }, 1000);
+  }
+}
+
+const newContainer = () => {
+  const newContainer = document.createElement('div');
+  newContainer.setAttribute('id', 'new-container');
+  newContainer.classList.add('new-container');
+  const newHeart = document.createElement('div');
+  newHeart.classList.add('new-heart');
+  // Remove container and add new heart
+  newContainer.style = `
     margin: 0;
     padding: 0;
     min-height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100%;
+    height: 100%;
     background: #0b1522;`
-    document.body.appendChild(newHeart);
-    //  And add the valentine day countdown
-    const valentineCountdown = document.createElement('div');
-    valentineCountdown.classList.add('valentine-countdown');
-    valentineCountdown.innerHTML = `
-    <div class="valentine-countdown-text">
-      <p>Today is not Valentine's Day</p>
-      <p>But every day is a day to love you</p>
-    </div>
-    `
-    document.body.appendChild(valentineCountdown);
-  }
+  document.body.appendChild(newHeart);
+  //  And add the valentine day countdown
+  // const valentineCountdown = document.createElement('div');
+  // valentineCountdown.classList.add('valentine-countdown');
+  // valentineCountdown.innerHTML = `
+  //   <div class="valentine-countdown-text">
+  //     <p>Today is not Valentine's Day</p>
+  //     <p>But every day is a day to love you</p>
+  //   </div>
+  //   `
+  newContainer.appendChild(newHeart);
+  // newContainer.appendChild(valentineCountdown);
+  document.body.appendChild(newContainer);
 }
