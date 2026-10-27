@@ -3,106 +3,267 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>To my dear, Minh Anh</title>
-    <link rel="icon" href="statics/images/heart.svg" />
-    <link rel="stylesheet" href="statics/css/reset.css" />
-    <link rel="stylesheet" href="statics/css/style.css" />
-    <link rel="stylesheet" href="statics/css/page-1.css" />
-    <link rel="stylesheet" href="statics/css/page-2.css" />
-    <link rel="stylesheet" href="statics/css/new-heart.css" />
-    <link rel="stylesheet" href="statics/css/letter-cover.css" />
+    <title>Cao Phuoc Long — Software Engineer</title>
+    <meta
+      name="description"
+      content="Cao Phuoc Long (Leon) — full-stack engineer in Ho Chi Minh City. TypeScript on the front, Go and Python on the back, lately deep in local LLM tooling."
+    />
+    <meta name="theme-color" content="#07090c" />
+    <meta property="og:title" content="Cao Phuoc Long — Software Engineer" />
+    <meta property="og:description" content="Full-stack engineer. TypeScript, Go, Python, local LLM tooling." />
+    <meta property="og:url" content="https://caophuoclong.github.io/" />
+    <link rel="icon" href="statics/icons/favicon.ico" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap" rel="stylesheet" />
-    <style>
-      @font-face {
-        font-family: "Adigiana";
-        src: url("statics/fonts/AdigianaExtreme-JvLM.ttf") format("truetype");
-        font-weight: normal;
-        font-style: normal;
-      }
-      @font-face {
-        font-family: "Dreaming";
-        src: url("statics/fonts/dreaming-outloud-script.otf") format("truetype");
-        font-weight: bold;
-        font-style: normal;
-      }
-    </style>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geist:wght@300..700&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="statics/css/portfolio.css" />
+    <script src="statics/js/portfolio.js" defer></script>
   </head>
   <body>
-    <div id="container" class="container">
-      <img style="position: absolute; top: 0; left: 0; width: 150px; transform: rotate(180deg); z-index: 0" src="statics/images/left.svg" />
-      <img
-        style="position: absolute; top: 0; right: 0; width: 150px; transform: rotate(270deg) translate(0px, 10%); z-index: 0"
-        src="statics/images/left.svg"
-      />
-      <img
-        style="position: absolute; bottom: 0; left: 0; width: 150px; transform: rotate(90deg) translate(0px, 10%); z-index: 0"
-        src="statics/images/left.svg"
-      />
-      <img style="position: absolute; bottom: 0; right: 0; width: 150px; z-index: 0" src="statics/images/left.svg" />
-      <div class="adigiana" style="font-family: 'Adigiana'; text-align: center">
-        <div class="adigiana" style="font-family: 'Adigiana'; text-align: center">
-          <p style="font-size: 3rem; color: #fdfdfd; text-shadow: 2px 2px 4px #d44267">Happy</p>
-          <p style="font-size: 3.2rem; color: #fdfdfd; text-shadow: 2px 2px 4px #d44267">Valentine's Day</p>
+    <a class="skip" href="#work">Skip to work</a>
+
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Cao Phuoc Long, back to top">
+        <span class="brand-mark">PL</span>
+        <span class="brand-name">Cao Phuoc Long</span>
+      </a>
+      <nav aria-label="Primary">
+        <ul>
+          <li><a href="#work">Work</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#stack">Stack</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <p class="clock" aria-live="off">
+        <span class="dot" aria-hidden="true"></span>
+        HCMC <time id="local-time">--:--</time>
+      </p>
+    </header>
+
+    <main>
+      <section id="top" class="hero" aria-labelledby="hero-title">
+        <canvas class="hero-canvas" aria-hidden="true"></canvas>
+        <div class="hero-inner">
+          <p class="kicker reveal">Software engineer · Ho Chi Minh City</p>
+          <h1 id="hero-title" class="hero-title">
+            <span class="line reveal">I build things,</span>
+            <span class="line reveal">then I <em>rebuild</em> them</span>
+            <span class="line reveal">better.</span>
+          </h1>
+          <p class="hero-lede reveal">
+            Full-stack engineer at <a href="https://github.com/codifech">Codifech</a>. TypeScript on the front, Go and
+            Python on the back — and lately, a lot of local LLM tooling in between.
+          </p>
+          <p class="hero-actions reveal">
+            <a class="btn btn-primary" href="#work">See the work</a>
+            <a class="btn btn-ghost" href="#contact">Start a conversation</a>
+          </p>
         </div>
-      </div>
-      <img class="fly-heart" style="left: 0; transform: translate(50%, -10%)" src="statics/images/fly-heart.svg" />
-      <img class="fly-heart" style="right: 0; transform: translate(-50%, -10%)" src="statics/images/fly-heart.svg" />
-      <div class="many-heart-container" style="width: 15%; transform: translateY(-100%) translateX(50%)">
-        <img class="many-heart" src="statics/images/many-heart.png" />
-        <div class="many-heart-overlay brush"></div>
-      </div>
-      <div class="many-heart-container" style="width: 13%; right: 0; left: auto; transform: translateX(-15%) rotate(360deg) scaleX(-1)">
-        <img class="many-heart" src="statics/images/many-heart.png" />
-        <div class="many-heart-overlay brush delay-1"></div>
-      </div>
-      <img class="bear" src="statics/images/s.webp" />
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        xmlns:xlink="http://www.w3.org/1999/xlink"
-        height="241.9"
-        preserveAspectRatio="xMidYMid meet"
-        version="1.0"
-        viewBox="24.4 143.9 451.1 241.9"
-        width="90%"
-        zoomAndPan="magnify"
-      >
-        <g id="change1_1">
-          <path
-            d="M474.18,253.93c1.37-20.89-34.73-38.96-55.15-40.37c-1.85-0.13-3.69-0.11-5.49,0.04 c-0.71-18.69-15.11-34.2-33.76-35.49c-5.56-0.38-10.91,0.54-15.76,2.51c-10.9-15.59-28.28-26.26-48.44-27.65 c-31.57-2.17-59.38,19.14-67.1,49.33c-4.91-2.57-10.4-4.18-16.25-4.58c-23.1-1.59-43.09,16.27-44.65,39.9 c-1.55,23.63,15.91,44.07,39.02,45.66c2.69,0.19,5.34,0.1,7.92-0.22c1.56,18.4,16.04,33.39,34.61,34.67 c6.89,0.47,13.47-1,19.22-3.96c6.67,10.73,18.07,18.18,31.43,19.1c17.89,1.23,33.84-9.63,40.21-25.76 c5.44,4.73,12.36,7.79,20.04,8.32c16.77,1.15,31.54-10.13,35.7-26.14C435.43,289.74,472.84,274.25,474.18,253.93z"
-            fill="#fbe6ef"
-          />
-        </g>
-        <g id="change1_2">
-          <path
-            d="M279.1,242.11c1.31-19.89-13.4-37.1-32.84-38.44c-1.77-0.12-3.51-0.11-5.22,0.03 c-0.67-17.8-14.39-32.57-32.15-33.79c-5.29-0.36-10.38,0.51-15.01,2.39c-10.38-14.85-26.93-25.01-46.13-26.33 c-30.06-2.07-56.54,18.22-63.89,46.97c-4.68-2.44-9.9-3.98-15.47-4.36c-22-1.51-41.03,15.5-42.51,37.99 c-1.48,22.5,15.15,41.96,37.15,43.48c2.56,0.18,5.08,0.1,7.54-0.21c1.49,17.52,15.27,31.79,32.96,33.01 c6.56,0.45,12.83-0.95,18.3-3.77c6.35,10.22,17.21,17.31,29.92,18.19c17.03,1.17,32.22-9.17,38.29-24.53 c5.18,4.51,11.77,7.42,19.08,7.92c15.96,1.1,30.03-9.65,33.99-24.89C261.88,276.2,277.83,261.45,279.1,242.11z"
-            fill="#fbe6ef"
-          />
-        </g>
-        <g id="change2_1">
-          <path
-            d="M382.14,327.8c6.4-22.38-6.53-45.94-28.88-52.63c-2.03-0.61-4.07-1.05-6.1-1.35 c3.58-20.51-8.79-41.03-29.21-47.13c-6.08-1.82-12.23-2.17-18.08-1.25c-8.46-19.72-25.28-35.71-47.34-42.31 c-34.55-10.33-70.39,5.84-86.01,36.74c-4.85-4.03-10.57-7.17-16.98-9.09c-25.28-7.56-51.64,6.83-58.88,32.15 c-7.24,25.32,7.39,51.97,32.67,59.53c2.94,0.88,5.9,1.46,8.85,1.76c-2.56,20.41,10.02,40.38,30.34,46.46 c7.54,2.26,15.19,2.31,22.27,0.54c4.9,13.36,15.82,24.34,30.44,28.71c19.58,5.85,39.82-1.94,50.66-17.88 c4.94,6.52,11.91,11.6,20.31,14.11c18.35,5.49,37.38-3.06,45.73-19.43C353.7,362.19,375.91,349.56,382.14,327.8z"
-            fill="#fad5e5"
-          />
-        </g>
-        <g id="change3_1">
-          <path
-            d="M422.58,306.45c-1.05-16.31-14.97-28.68-31.08-27.62c-1.46,0.1-2.89,0.3-4.29,0.6 c-2.46-14.39-15.3-24.89-30.02-23.92c-4.38,0.29-8.47,1.56-12.07,3.59c-10.11-10.93-24.79-17.36-40.69-16.32 c-24.9,1.63-44.47,21.04-47.43,45.21c-4.1-1.47-8.56-2.14-13.17-1.84c-18.23,1.19-32.03,17.12-30.84,35.56s16.93,32.44,35.16,31.24 c2.12-0.14,4.19-0.48,6.17-1c3.1,14.07,15.94,24.16,30.6,23.2c5.44-0.36,10.43-2.19,14.63-5.09c6.31,7.6,15.98,12.17,26.52,11.48 c14.11-0.92,25.48-11.01,28.81-24.15c4.74,3.09,10.46,4.73,16.52,4.34c13.23-0.87,23.63-11.15,25.24-23.97 C412.09,336.06,423.61,322.31,422.58,306.45z"
-            fill="#fff"
-          />
-        </g>
-        <g id="change3_2">
-          <path
-            d="M74.07,287.9c1.03-18.11,16.12-31.94,33.69-30.89c1.6,0.1,3.16,0.31,4.68,0.64 c2.58-15.99,16.5-27.73,32.55-26.77c4.78,0.29,9.25,1.67,13.18,3.9c10.94-12.2,26.9-19.45,44.25-18.41 c27.16,1.62,48.63,23.02,52.02,49.82c4.46-1.66,9.31-2.44,14.35-2.14c19.88,1.19,35.04,18.76,33.87,39.24 c-1.17,20.48-18.23,36.12-38.11,34.94c-2.32-0.14-4.57-0.5-6.73-1.06c-3.28,15.64-17.21,26.93-33.19,25.98 c-5.93-0.35-11.39-2.35-15.98-5.53c-6.82,8.49-17.34,13.63-28.83,12.94c-15.39-0.92-27.85-12.02-31.58-26.59 c-5.14,3.47-11.37,5.33-17.97,4.93c-14.42-0.86-25.83-12.2-27.69-26.42C85.72,320.68,73.07,305.51,74.07,287.9z"
-            fill="#fff"
-          />
-        </g>
-        <text id="romantic" x="55%" y="110%" text-anchor="middle" fill="black" font-size="24px" font-family="Dreaming" dy=".3em"></text>
-        <image transform="rotate(45 120 220)" y="230" x="100" width="60px" height="60px" href="statics/images/heart.svg" />
-        <image transform="rotate(45 325 285)" y="270" x="405" width="40px" height="40px" href="statics/images/heart.svg" />
-      </svg>
-    </div>
+        <p class="scroll-hint" aria-hidden="true">Scroll</p>
+      </section>
+
+      <section id="work" class="section" aria-labelledby="work-title">
+        <header class="section-head">
+          <p class="eyebrow reveal">01 — Selected work</p>
+          <h2 id="work-title" class="reveal">Things I've been building</h2>
+          <p class="section-note reveal">
+            Each card follows the same arc: the problem worth solving, how I approached it, and what it runs on.
+          </p>
+        </header>
+
+        <ol class="projects">
+          <li class="project project-featured reveal">
+            <article>
+              <header>
+                <p class="project-meta"><span>Rust</span><span class="status">In progress</span></p>
+                <h3>goh</h3>
+              </header>
+              <dl class="arc">
+                <div>
+                  <dt>Problem</dt>
+                  <dd>
+                    Terminal autocomplete tools are either heavy, cloud-tied, or stuck in one terminal. I wanted
+                    one that's light, private, and lives in the terminal you already use.
+                  </dd>
+                </div>
+                <div>
+                  <dt>Approach</dt>
+                  <dd>
+                    A daemon plus popup that suggests subcommands, options and arguments in context. The popup
+                    inherits your terminal's colors; where the OS won't allow an overlay, it falls back to inline
+                    hints instead of faking support.
+                  </dd>
+                </div>
+                <div>
+                  <dt>Built with</dt>
+                  <dd>Rust · IPC schema · shell integration · design system &amp; prototype first</dd>
+                </div>
+              </dl>
+              <a class="project-link" href="https://github.com/caophuoclong/goh">View repository</a>
+            </article>
+          </li>
+
+          <li class="project reveal">
+            <article>
+              <header>
+                <p class="project-meta"><span>TypeScript</span><span class="status">In progress</span></p>
+                <h3>Mailbox</h3>
+              </header>
+              <dl class="arc">
+                <div>
+                  <dt>Problem</dt>
+                  <dd>Several inboxes, each full of noise. I wanted one inbox for every account, with zero clutter.</dd>
+                </div>
+                <div>
+                  <dt>Approach</dt>
+                  <dd>
+                    A mailbox that runs entirely on Cloudflare Workers: custom-domain addresses receive through
+                    Email Routing and send from Workers, with threading, full-text search, rules, scheduled and
+                    undo send, and AI thread briefs and draft replies.
+                  </dd>
+                </div>
+                <div>
+                  <dt>Built with</dt>
+                  <dd>Cloudflare Workers · D1 · R2 · Durable Objects · Workers AI · TanStack Start</dd>
+                </div>
+              </dl>
+            </article>
+          </li>
+
+          <li class="project reveal">
+            <article>
+              <header>
+                <p class="project-meta"><span>Go</span><span>TypeScript</span></p>
+                <h3>Genlio</h3>
+              </header>
+              <dl class="arc">
+                <div>
+                  <dt>Problem</dt>
+                  <dd>
+                    Shopee affiliates spend hours writing captions and posting the same products by hand to
+                    Facebook Pages and Instagram.
+                  </dd>
+                </div>
+                <div>
+                  <dt>Approach</dt>
+                  <dd>
+                    Paste a product link, pick an opening hook, edit the AI-drafted caption and choose a time.
+                    Genlio schedules the post and tracks clicks through its own links.
+                  </dd>
+                </div>
+                <div>
+                  <dt>Built with</dt>
+                  <dd>Go · PostgreSQL · TanStack Start · Astro · Cloudflare Workers &amp; Queues · Grafana</dd>
+                </div>
+              </dl>
+              <a class="project-link" href="https://genlio.co">Visit genlio.co</a>
+            </article>
+          </li>
+        </ol>
+      </section>
+
+      <section id="about" class="section about" aria-labelledby="about-title">
+        <header class="section-head">
+          <p class="eyebrow reveal">02 — About</p>
+          <h2 id="about-title" class="reveal">Hi, I'm Long. Most people call me Leon.</h2>
+        </header>
+        <div class="about-body">
+          <p class="reveal">
+            I work across the stack — product interfaces in TypeScript, services in Go and Python — and I care most
+            about the parts users never see: clear contracts, boring deploys, and code the next person can read.
+          </p>
+          <p class="reveal">
+            Lately I've been deep in local LLM tooling: proxies, agents, and plugin systems around model runtimes.
+            Outside of work I over-engineer my Sofle split keyboard and its ZMK firmware more than any reasonable
+            person should.
+          </p>
+          <ul class="facts reveal">
+            <li><span>Based in</span> Ho Chi Minh City, Vietnam</li>
+            <li><span>Working at</span> Codifech</li>
+            <li><span>Focus</span> Full-stack product · AI tooling · DX</li>
+            <li><span>Open to</span> Collaboration &amp; interesting problems</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="stack" class="section" aria-labelledby="stack-title">
+        <header class="section-head">
+          <p class="eyebrow reveal">03 — Stack</p>
+          <h2 id="stack-title" class="reveal">Tools I reach for</h2>
+        </header>
+        <div class="stack">
+          <section class="reveal" aria-labelledby="stack-lang">
+            <h3 id="stack-lang">Languages</h3>
+            <ul><li>TypeScript</li><li>Go</li><li>Python</li><li>Rust</li><li>C</li><li>Shell</li></ul>
+          </section>
+          <section class="reveal" aria-labelledby="stack-front">
+            <h3 id="stack-front">Frontend</h3>
+            <ul><li>React</li><li>TanStack</li><li>Next.js</li><li>Expo</li><li>Tailwind</li></ul>
+          </section>
+          <section class="reveal" aria-labelledby="stack-back">
+            <h3 id="stack-back">Backend &amp; data</h3>
+            <ul><li>Node.js</li><li>NestJS</li><li>PostgreSQL</li><li>Redis</li><li>GraphQL</li></ul>
+          </section>
+          <section class="reveal" aria-labelledby="stack-infra">
+            <h3 id="stack-infra">Infra &amp; tools</h3>
+            <ul><li>Docker</li><li>Terraform</li><li>GitHub Actions</li><li>Neovim</li><li>ZMK</li></ul>
+          </section>
+        </div>
+      </section>
+
+      <section id="contact" class="section contact" aria-labelledby="contact-title">
+        <header class="section-head">
+          <p class="eyebrow reveal">04 — Contact</p>
+          <h2 id="contact-title" class="reveal">Got an interesting problem?</h2>
+          <p class="section-note reveal">
+            Two quick steps and your mail app opens with a draft. Or just write to
+            <a href="mailto:caophuoclong.se@gmail.com">caophuoclong.se@gmail.com</a>.
+          </p>
+        </header>
+
+        <form class="contact-form reveal" id="contact-form" novalidate>
+          <fieldset class="step" data-step="1">
+            <legend><span class="step-num">1/2</span> What's it about?</legend>
+            <div class="chips">
+              <label><input type="radio" name="topic" value="A product to build" required /> A product to build</label>
+              <label><input type="radio" name="topic" value="AI / LLM tooling" /> AI / LLM tooling</label>
+              <label><input type="radio" name="topic" value="A Go or TypeScript service" /> A Go or TypeScript service</label>
+              <label><input type="radio" name="topic" value="Just saying hi" /> Just saying hi</label>
+            </div>
+            <button type="button" class="btn btn-primary" data-next>Next</button>
+          </fieldset>
+
+          <fieldset class="step" data-step="2" hidden>
+            <legend><span class="step-num">2/2</span> Tell me a little more</legend>
+            <label class="field">
+              <span>Your name</span>
+              <input type="text" name="name" autocomplete="name" required />
+            </label>
+            <label class="field">
+              <span>A few lines about it</span>
+              <textarea name="message" rows="4" required></textarea>
+            </label>
+            <p class="form-error" role="alert" hidden></p>
+            <div class="step-actions">
+              <button type="button" class="btn btn-ghost" data-back>Back</button>
+              <button type="submit" class="btn btn-primary">Open email draft</button>
+            </div>
+          </fieldset>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© <span id="year">2026</span> Cao Phuoc Long</p>
+      <ul>
+        <li><a href="https://github.com/caophuoclong">GitHub</a></li>
+        <li><a href="https://github.com/codifech">Codifech</a></li>
+        <li><a href="mailto:caophuoclong.se@gmail.com">Email</a></li>
+      </ul>
+    </footer>
   </body>
-  <script src="statics/js/index.js"></script>
 </html>
